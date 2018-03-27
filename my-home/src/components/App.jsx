@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
+import { Link, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Photo from './Photo';
 
 class App extends Component {
     render(){
         return (
-            <div  className='home'>
-                <div className='logo'></div>
-                <div className='motto'>书山有路勤为径 学海无涯苦作舟</div>
-                <div className='labels'>
-                    <a className='label'>兴趣</a>
-                    <a className='label'>爱好</a>
-                    <a className='label'>喜欢</a>
-                    <a className='label'>沉溺</a>
-                    <a className='label'>兴趣</a>
+            <React.Fragment>
+                
+                <div className='container'>
+                    <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/photo" component={Photo}/>
+                </Switch>
                 </div>
-            </div>
+                <ul className='nav'>
+                    <li className='nav-label'><Link to="/">首页</Link></li>
+                    <li className='nav-label'><Link to="/photo">相册</Link></li>
+                    <li className='nav-label'><Link to="/">小诗</Link></li>
+                    <li className='nav-label'><Link to="/">音乐</Link></li>
+                    <li className='nav-label'><Link to="/">组件</Link></li>
+                </ul>
+            </React.Fragment>
         )
     }
 }
