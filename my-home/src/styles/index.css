@@ -1,14 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
 body,
 ul,
 li {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    color: #fff;
 }
 
 body {
     background: #20A0FF;
+    color: #fff;
 }
 
 ul,
@@ -246,4 +250,60 @@ a {
     text-align: center;
     margin: 20px 0;
     font-size: 30px;
+}
+
+
+/*poem component*/
+
+.poem-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.poem-card {
+    width: 20%;
+    margin: 20px;
+    padding: 10px 0;
+    background: #F2F2F2;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+.poem-card:hover {
+    background: #84e6b5
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.author {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.title:hover {
+    color: #f35336;
+}
+
+.author:hover {
+    color: #ff4e20;
+}
+
+.poem-content li:hover {
+    color: #ff4c00;
+}
+
+.poem-content li:nth-child(2n+1)::after {
+    content: '，'
+}
+
+.poem-content li:nth-child(2n)::after {
+    content: '。'
 }
