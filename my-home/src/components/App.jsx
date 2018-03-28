@@ -8,7 +8,6 @@ class App extends Component {
     render(){
         return (
             <React.Fragment>
-                
                 <div className='container'>
                     <Switch>
                     <Route exact path="/" component={Home}/>
