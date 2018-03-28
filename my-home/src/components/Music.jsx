@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 
-class Photo extends Component {
+class Music extends Component {
     render(){
         return (
-            <h1>PHoto</h1>
+            <h1>music</h1>
         )
     }
 }
 
-export default Photo;
+export default Music;
