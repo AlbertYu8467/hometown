@@ -1,6 +1,4 @@
 import React,{Component} from 'react';
-import ReactDom from 'react-dom';
-
 const poemArr = [
     '春夜洛城闻笛*唐 李白_谁家玉笛暗飞声散入春风满洛城此夜曲中闻折柳何人不起故园情',
     '赠花卿*唐 杜甫_锦城丝管日纷纷半入江风半入云此曲只应天上有人间能得几回闻',

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class Music extends Component {
+class Modal extends Component {
     render(){
         return (
             <h1>music</h1>
@@ -9,4 +9,4 @@ class Music extends Component {
     }
 }
 
-export default Music;
+export default Modal;

@@ -1,5 +1,4 @@
 import React ,{Component} from 'react';
-import ReactDom from 'react-dom';
 import init from '../js/bg.js'; 
 
 class Home extends Component {

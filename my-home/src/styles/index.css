@@ -4,15 +4,14 @@
 
 body,
 ul,
-li ,
-p{
+li,
+p {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
 body {
-    background: #20A0FF;
     color: #fff;
 }
 
@@ -46,6 +45,8 @@ a {
     left: 0;
     right: 0;
     overflow: hidden;
+    background: url('../images/bg.jpg') no-repeat;
+    background-size: cover;
 }
 
 .nav-label {
@@ -307,4 +308,70 @@ a {
 
 .poem-content li:nth-child(2n)::after {
     content: '。'
+}
+
+
+/*photo component*/
+
+#photo_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#content {
+    -webkit-column-width: 232px;
+    -moz-column-width: 232px;
+    column-width: 232px;
+}
+
+.pic {
+    margin: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.pic:hover {
+    background: rgba(59, 229, 112, .3);
+}
+
+.pic img {
+    width: 230px;
+    padding: 10px;
+}
+
+
+/*modal component*/
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.modal-content {
+    width: 60%;
+    min-height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
