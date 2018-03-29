@@ -45,8 +45,7 @@ a {
     left: 0;
     right: 0;
     overflow: hidden;
-    background: url('../images/bg.jpg') no-repeat;
-    background-size: cover;
+    background: #20A0FF;
 }
 
 .nav-label {
@@ -319,16 +318,16 @@ a {
     left: 0;
     right: 0;
     bottom: 80px;
-    width: 100%;
+    width: 1200px;
+    margin: 50px auto;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
 #content {
-    -webkit-column-width: 232px;
-    -moz-column-width: 232px;
-    column-width: 232px;
+    column-count: 4;
+    column-gap: 10px;
 }
-
 .pic {
     margin: 20px 10px;
     text-align: center;
@@ -337,13 +336,14 @@ a {
     border-radius: 8px;
 }
 
-.pic:hover {
-    background: rgba(59, 229, 112, .3);
+.pic:hover img{
+    transform: scale(1.05);
 }
 
 .pic img {
-    width: 230px;
+    width: 100%;
     padding: 10px;
+    transition: all .5s linear;
 }
 
 
@@ -355,7 +355,7 @@ a {
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .25);
     cursor: pointer;
     z-index: 10;
 }
@@ -367,11 +367,26 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: red;
 }
 
 .modal-content img {
     width: 100%;
     height: auto;
     vertical-align: middle;
+}
+.prev,
+.next {
+    position: absolute;
+    top: 45%;
+    width: 100px;
+    height: 100px;
+}
+.prev{
+    left: 5%;
+    background: url(/images/previous.png) no-repeat center;
+}
+.next{
+    right: 5%;
+    background: url(/images/next.png) no-repeat center;
+    
 }

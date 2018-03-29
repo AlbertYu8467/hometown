@@ -11,8 +11,10 @@ class Modal extends Component {
         return (
             <div className='modal' style={{display:`${this.props.show?'block':'none'}`}} onClick={this.props.onClick}>
                   <div className='modal-content'>
-                    <img src={require(`../images/1.jpg`)} alt=""/>
+                    <img src={this.props.src} alt=""/>
                   </div>
+                  <div className='prev' onClick={this.props.prevClick}></div>
+                  <div className='next'onClick={this.props.nextClick}></div>
             </div>
         )
     }

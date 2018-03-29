@@ -11,7 +11,7 @@ class SinglePhoto extends Component {
     render(){
         return (
             <div className='pic' onClick = {this.props.onClick}>
-                <img src={require(`../images/${this.props.src}`)} alt=""/>
+                <img src={this.props.src} alt=""/>
             </div>
         )
     }
