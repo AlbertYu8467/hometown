@@ -85,7 +85,7 @@ class Photo extends Component {
                     <div id="content">
                         {
                             this.state.imgs.map((value,index) => (
-                                <SinglePhoto key={index} src={value} show={false} onClick={() => this.handleClick(index)}/>
+                                <SinglePhoto key={index} number={index+1} src={value} show={false} onClick={() => this.handleClick(index)}/>
                             ))
                         }
                     </div>

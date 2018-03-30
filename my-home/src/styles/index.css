@@ -328,15 +328,17 @@ a {
     column-count: 4;
     column-gap: 10px;
 }
+
 .pic {
     margin: 20px 10px;
+    min-height: 180px;
     text-align: center;
     cursor: pointer;
     border: 1px solid #ddd;
     border-radius: 8px;
 }
 
-.pic:hover img{
+.pic:hover img {
     transform: scale(1.05);
 }
 
@@ -374,6 +376,7 @@ a {
     height: auto;
     vertical-align: middle;
 }
+
 .prev,
 .next {
     position: absolute;
@@ -381,12 +384,13 @@ a {
     width: 100px;
     height: 100px;
 }
-.prev{
+
+.prev {
     left: 5%;
     background: url(/images/previous.png) no-repeat center;
 }
-.next{
+
+.next {
     right: 5%;
     background: url(/images/next.png) no-repeat center;
-    
 }
