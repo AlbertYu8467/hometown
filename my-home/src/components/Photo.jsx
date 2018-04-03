@@ -35,7 +35,7 @@ const srcArr =[
     "http://wx2.sinaimg.cn/mw690/005VoDhigy1fpu2fniapqj31040kcjz0.jpg",
     "http://wx4.sinaimg.cn/mw690/005VoDhigy1fpu2fyy9xhj31040kck0v.jpg",
     "http://wx3.sinaimg.cn/mw690/005VoDhigy1fpu2g69q6tj31040r3wlc.jpg",
-]
+];
 class Photo extends Component {
     constructor(props){
         super(props);
@@ -43,7 +43,7 @@ class Photo extends Component {
             imgs:srcArr,
             show:false,
             index:0,
-        }
+        };
         this.handleClick = this.handleClick.bind(this);
         this.modalClick = this.modalClick.bind(this);
         this.prevClick = this.prevClick.bind(this);
@@ -53,19 +53,19 @@ class Photo extends Component {
         this.setState({
             show:true,
             index:index,
-        })
+        });
         console.log(this.state)
     }
     prevClick(e,index){
         e.stopPropagation();
-        index == 0 && (index=this.state.imgs.length)
+        index == 0 && (index=this.state.imgs.length);
         this.setState({
             index:--index
         })
     }
     nextClick(e,index){
         e.stopPropagation() ;
-        index == this.state.imgs.length-1 && (index=0)
+        index == this.state.imgs.length-1 && (index=0);
         this.setState({
             index:++index
         })
@@ -98,9 +98,6 @@ class Photo extends Component {
             </React.Fragment>
         )
     }
-}
-function getRandom(min,max){
-    return Math.ceil(Math.random()*(max-min) + min);
 }
 
 export default Photo;
