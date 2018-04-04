@@ -497,6 +497,51 @@ a {
 .music-next {
     background-image:url("/images/music_next.png");
 }
+.control-process {
+    width: 70%;
+    height: 30px;
+    margin-left: 10px;
+    padding:0 60px;
+    position: relative;
+}
+.time-start,
+.time-end {
+    position: absolute;
+    font-size: 12px;
+    line-height: 30px;
+    color: #1F2D3D;
+}
+.time-start {
+    left: 15px;
+}
+.time-end {
+    right: 15px;
+}
+#process_container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background: #99a9bf;
+    border-radius: 3px;
+}
+#dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50% 50%;
+    background: #ff4949;
+    position: absolute;
+    margin-top: -4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px #ff4949;
+}
+#process_bar {
+    width: 20%;
+    height: 4px;
+    background-color: #ff4949;
+    border-radius: 3px;
+}
 
 .lyrics {
     float: left;
@@ -533,5 +578,8 @@ a {
     color: #1F2D3D;
 }
 .lyric-wrap p.active {
+    color: #ff4949;
+}
+.lyric-wrap p.now {
     color: #ff4949;
 }

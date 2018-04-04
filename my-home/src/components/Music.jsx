@@ -30,13 +30,15 @@ class Music extends Component {
         this.handlePrevClick = this.handlePrevClick.bind(this);
         this.handleNextClick = this.handleNextClick.bind(this);
     }
-    onPlayClick(){
+    onPlayClick(e){
+        e.stopPropagation();
         this.setState({
             isPlay:!this.state.isPlay,
             isNext:false,
         });
     }
-    handlePrevClick(){
+    handlePrevClick(e){
+        e.stopPropagation();
         if(this.state.current <= 0){
             this.setState({
                 current:musicArr.length-1
@@ -46,17 +48,10 @@ class Music extends Component {
                 current:--this.state.current
             })
         }
-        this.setState({
-            isPlay:false,
-            isNext:true,
-        });
-        setTimeout(() =>{
-            this.setState({
-                isPlay:true
-            });
-        },200)
+        this.listenPlay();
     }
-    handleNextClick(){
+    handleNextClick(e){
+        e.stopPropagation();
         if(this.state.current >= musicArr.length-1){
             this.setState({
                 current:0
@@ -66,15 +61,20 @@ class Music extends Component {
                 current:++this.state.current
             })
         }
+        this.listenPlay()
+    }
+    listenPlay(){
+        let music = document.getElementById('music');
+        let self =this;
         this.setState({
             isPlay:false,
             isNext:true,
         });
-        setTimeout(() =>{
-            this.setState({
+        music.oncanplaythrough = function () {
+            self.setState({
                 isPlay:true
             });
-        },200)
+        };
     }
     render(){
         return (
@@ -84,9 +84,9 @@ class Music extends Component {
                     logoSrc = {musicArr[this.state.current].logoSrc}
                     />
                 <Lyrics current={this.state.current}/>
-                <Control playClick={() => this.onPlayClick()}
-                         prevClick={() => this.handlePrevClick()}
-                         nextClick={() => this.handleNextClick()}
+                <Control playClick={(e) => this.onPlayClick(e)}
+                         prevClick={(e) => this.handlePrevClick(e)}
+                         nextClick={(e) => this.handleNextClick(e)}
                          audioSrc = {musicArr[this.state.current].audioSrc}
                          isPlay = {this.state.isPlay}
                          isNext = {this.state.isNext}
