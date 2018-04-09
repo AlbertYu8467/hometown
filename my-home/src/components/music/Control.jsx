@@ -21,7 +21,7 @@ class Control extends Component {
         let audioSrc= `/audio/${this.props.audioSrc}`;
         return (
                 <div className="control">
-                    <audio src={audioSrc}  id="music" loop></audio>
+                    <audio src={audioSrc}  id="music"></audio>
                     <div className="control-play">
                         <span className="music-previous"onClick={this.props.prevClick}></span>
                         <span className="music-play" onClick={this.props.playClick} style={style}></span>

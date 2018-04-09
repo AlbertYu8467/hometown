@@ -20,7 +20,16 @@ class Process extends Component {
                 duration:Math.round(music.duration),
                 currentTime:Math.round(music.currentTime)
             });
+            console.log('duration')
         };
+        music.ondurationchange = function(){
+            self.setState({
+                duration:Math.round(music.duration),
+                currentTime:Math.round(music.currentTime),
+                index:0
+            });
+            console.log('change')
+        }
         music.addEventListener('timeupdate',function () {
             self.setState({
                 currentTime:Math.round(music.currentTime),
